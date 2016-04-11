@@ -14,4 +14,13 @@ function convertToRoman(num){
 		IV:4,
 		I:1
 	}, latin = "", key; 
+
+	for(key in dualNumSys){
+		while(num >= dualNumSys[key]){
+			latin += key; 
+			num -= dualNumSys[key]; 
+		}
+	}
+	return latin; 
 }
+convertToRoman(36); 
